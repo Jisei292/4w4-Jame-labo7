@@ -141,11 +141,8 @@ add_action( 'widgets_init', 'theme_js_widgets_init' );
  */
 function theme_js_scripts() {
 	wp_enqueue_style( 'theme-js-style', get_stylesheet_uri(), array(), _S_VERSION );
-
-	wp_enqueue_style( 'theme-js-google-fonts', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap', false ); 
-	
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+	 
+	wp_enqueue_style( 'theme-js-google-fon', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap', false ); 
 
 	wp_style_add_data( 'theme-js-style', 'rtl', 'replace' );
 
