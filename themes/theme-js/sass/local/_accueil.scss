@@ -1,7 +1,7 @@
 body {
     margin : 0;
     padding : 0;
-    background-color: blue;
+    background-color: rgb(0, 217, 255);
 }
 
 body.home::after {
@@ -38,8 +38,12 @@ body.home::after {
 .site title{
     font-size: clamp(.9rem, #{"-0.875 + 8.333vw"}, 1.5rem);
     margin-top: 0;
+    font-weight: normal;
 }
 
 .accueil{
-    font-size: 2rem;
+    font-size: clamp(.9rem, #{"-0.875 + 8.333vw"}, 1.5rem);
+    ul{
+        list-style-type: none;
+    }
 }
