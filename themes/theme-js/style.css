@@ -538,12 +538,12 @@ a:hover, a:active {
 }
 
 .main-navigation a {
-  color: #d9ff00;
+  color: #4d2757;
   margin-left: 3rem;
 }
 
 .main-navigation a:visited {
-  color: #00ff22;
+  color: #0011ff;
 }
 
 .main-navigation a:hover, .main-navigation a:focus, .main-navigation a:active {
