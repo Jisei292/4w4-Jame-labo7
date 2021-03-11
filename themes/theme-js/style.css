@@ -704,22 +704,23 @@ textarea {
 --------------------------------------------- */
 .main-navigation {
   display: block;
-  width: 100%;
+  width: 100vw;
 }
 
 .main-navigation ul {
   display: none;
+  position: absolute;
+  width: 100%;
   list-style: none;
   margin: 0;
   padding-left: 0;
-  background-color: #ff9d00;
-  position: absolute;
-  width: 100%;
+  background-color: #000;
 }
 
 .main-navigation ul ul {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   float: left;
+  position: absolute;
   top: 100%;
   left: -999em;
   z-index: 99999;
@@ -742,32 +743,35 @@ textarea {
 
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
-  left: auto;
+  left: 0;
 }
 
 .main-navigation li {
   position: relative;
+  flex: 1;
 }
 
 .main-navigation a {
-  width: 300px;
+  display: block;
+  text-decoration: none;
+  padding: .5rem;
 }
 
+/* -----------------------------------------------------------------------------
+Bouton burger 
+------------------------------------------------------------------------------*/
 .menu-toggle {
-  padding: 0rem;
+  padding: 0;
   border: 0;
-  margin-left: 3rem;
-  transition: transform .20s;
-  transform: rotate(0);
 }
 
 .menu-toggle:hover,
 .menu-toggle:focus {
-  background: #b300ff;
+  background: #fafbfc;
 }
 
 .menu-toggle:focus {
-  outline: 1px solid #d67070;
+  outline: 1px solid #fff;
   outline-offset: -4px;
 }
 
@@ -775,26 +779,45 @@ textarea {
   transform: scale(0.99);
 }
 
-.main-navigation.toggled .menu-toggle {
-  transform: rotate(90deg);
+/*
+.main-navigation.toggled .menu-toggle{
+	transform : rotate(90deg);
 }
-
-/* Small menu. */
+*/
 .menu-toggle,
 .main-navigation.toggled ul {
   display: block;
 }
 
+.menu-toggle li a[heref="#"]::after,
+.main-navigation.toggled ul li a[heref="#"]::after {
+  position: absolute;
+  content: "\2B9E";
+  width: 100%;
+  height: 100%;
+  top: 25%;
+  bottom: 0;
+  left: 95%;
+  right: 0;
+}
+
+.menu-toggle li.focus a[heref="#"]::after,
+.main-navigation.toggled ul li.focus a[heref="#"]::after {
+  content: "\2B9F";
+}
+
+/* ---------------------------------------------------------------------------
+menu tablet
+------------------------------------------------------------------------------ */
 @media screen and (min-width: 37.5em) {
   .menu-toggle {
     display: none;
   }
+  .main-navigation.toggled ul,
   .main-navigation ul {
     display: flex;
-    height: 2rem;
-    justify-content: space-around;
-    align-items: center;
     position: static;
+    justify-content: space-around;
   }
 }
 
