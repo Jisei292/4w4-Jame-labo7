@@ -4,6 +4,15 @@ body {
     background-color: rgb(37, 20, 77);
 }
 
+body.home{
+    width: 100vw;
+    height: 100vw;
+    #primary{
+        margin-left: 0;
+        width: 100vw;
+    }
+}
+
 body.home::after {
     position: absolute;
     width: 100%;

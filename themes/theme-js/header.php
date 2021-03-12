@@ -45,8 +45,13 @@
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
+
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><img src="https://s2.svgbox.net/social.svg?ic=about-dot-me&color=000000" width="32" height="32"></button>
+			<section id="burger" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><img src="https://s2.svgbox.net/social.svg?ic=about-dot-me&color=000000" width="32" height="32">
+			<div></div>
+            <div></div>
+            <div></div>
+			</section>
 			<?php
 			wp_nav_menu(
 				array(
