@@ -1,2 +1,2 @@
 
-https://jisei292.github.io/labo-3-4w4/index.html
+https://jisei292.github.io/James_4w4_labo4/index.htm
