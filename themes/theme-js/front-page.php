@@ -28,7 +28,7 @@ get_header();
 				the_post();
 				$titre = get_the_title();
 				$session = substr($titre, 4,1);
-				$contenu = substr(get_the_content() );
+				$contenu = substr(get_the_title(), 0, 200);
 				$resume = substr($contenu, 0, 200);
 				?>
 
