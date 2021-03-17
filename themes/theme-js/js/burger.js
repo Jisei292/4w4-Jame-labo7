@@ -5,7 +5,7 @@
             let bar3 = document.querySelector('#burger div:nth-of-type(3)')
             let burger = document.getElementById('burger')
             burger.addEventListener('mousedown', function(){
-                if(bar1.classList.contents('ouvrirX1') == false)
+                if(bar1.classList.add('ouvrirX1') == false)
                 {
                     bar1.classList.remove('fermeX1')
                     bar1.classList.add('ouvrirX1')

@@ -101,10 +101,15 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------- */
 @import "utilities/alignments";
 
-/* Local
+/* Local accueil
 --------------------------------------------- */
 @import "local/accueil";
 
 /* Local burger
 --------------------------------------------- */
-@import "local/burger";
+@import "navigation/burger";
+
+
+/* Local carrousel
+--------------------------------------------- */
+@import "local/carrousel";
