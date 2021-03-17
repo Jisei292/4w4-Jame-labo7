@@ -21,19 +21,6 @@ get_header();
 				?>
 			</header><!-- .page-header -->
 
-			
-			
-		<section class="carrousel">
-		<div>1</div>
-		<div>2</div>
-		<div>3</div>
-		</section>
-		<button id="un">1</button>
-		<button id="deux">2</button>
-		<button id="trois">3</button>
-		
-		
-
 			<?php
 			$precedent = 0;
 			/* Start the Loop */
