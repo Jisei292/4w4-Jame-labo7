@@ -1,2 +1,2 @@
 
-https://jisei292.github.io/4w4_TP1/Index.htm
+https://jisei292.github.io/4w4_TP1/index.htm
