@@ -30,20 +30,44 @@ get_header();
 		<button id="deux">2</button>
 		<button id="trois">3</button>
 
+		
+		<section class="list-cours"> 
+
 			<?php
-			$precedent = 0;
+			$precedent = "XXXXXXX";
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
-				$titre = get_the_title();   582-4w4 
-				$session = substr($title, 4,1);
 
-			endwhile;
+				$titre_grand = get_the_title();   582-4w4 
+				$session = substr($title_grand, 4,1);
+				$nbHeure = substr($title_grand, -4,3);
+				$titre = substr($titre_grand, 8, -6);
+				$sigle = substr($title_grand, 0, 7);
+				$typeCours = get_field('type_de_cours');
+				
+				if ($precedent != $typeCours): ?>
+				<?php if ($precedent != "XXXXXXX"): ?>
+				
+				</section>
+				<?php endif ?>
+				<section>
+				
+				
+				<?php endif ?>
 
+				<article>
+				<p> <?php echo $sigle . " - " . $nbHeure . " - " . $typeCours;?> </p>
+				<a href="<?php echo get_permalink(); ?>"> <?php echo $titre; ?> </a>
+				<p> Session :  <?php echo $session?> </p>
+				</article>			
+
+				<?php
+				$precedent = $typeCours;
+			endwhile; ?>
 		
-
-		endif;
-		?>
+			</section>
+		<?php endif;?>
 
 	</main><!-- #main -->
 

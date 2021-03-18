@@ -52,6 +52,44 @@ body.home::after {
     }
 }
 
+/*
 .accueil{
     font-size: 2rem;
+    ul{
+        list-style-type: none;
+    }
+
+}
+
+*/
+
+.list_cours{
+    display: flex;
+    flex-direction: column;
+
+    section{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    article{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 30%;
+        border: 1px solid red;
+        p{
+            font-size: .7rem;
+            font-weight: bold;
+        }
+        a{
+            font-size: 2rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    }
+
+}
+    
 }
