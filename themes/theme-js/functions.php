@@ -207,3 +207,5 @@ function extraire_cours($query){
 
 add_action('pre_get_post', 'extraire_cours');
 
+function extraire_cours_front_page($query){
+	if( !is_admin() && $query->is_front_page() && $query->is_main_query() ){
