@@ -35,23 +35,8 @@ get_header();
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
-				$titre = get_the_title();
-				$session = substr($titre, 4,1);
-				$contenu = substr(get_the_title(), 0, 200);
-				$resume = substr($contenu, 0, 200);
-				?>
-
-				<?php
-				if ($session != $precedent){
-					echo "<p>Session : " . $session . "</p>";
-				}
-				$precedent = $session;
-
-				?>
-
-				<p> <?php echo $session . " - " . $titre; ?> </p>
-				<p> <?php echo $resume; ?>  </p>
-				<?php
+				$titre = get_the_title();   582-4w4 
+				$session = substr($title, 4,1);
 
 			endwhile;
 
