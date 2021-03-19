@@ -39,11 +39,11 @@ get_header();
 			while ( have_posts() ) :
 				the_post();
 
-				$titre_grand = get_the_title();   582-4w4 
-				$session = substr($title_grand, 4,1);
-				$nbHeure = substr($title_grand, -4,3);
+				$titre_grand = get_the_title();   
+				$session = substr($titre_grand, 4,1);
+				$nbHeure = substr($titre_grand, -4,3);
 				$titre = substr($titre_grand, 8, -6);
-				$sigle = substr($title_grand, 0, 7);
+				$sigle = substr($titre_grand, 0, 7);
 				$typeCours = get_field('type_de_cours');
 				
 				if ($precedent != $typeCours): ?>
