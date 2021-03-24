@@ -74,3 +74,14 @@ get_header();
 <?php
 get_sidebar();
 get_footer();
+
+function convertirtableau(&tPropriete)
+{
+
+	&tPropriete['session'] => substr($titre_grand, 4,1);
+	&tPropriete['nbHeure'] => substr($titre_grand, -4,3);
+	&tPropriete['titre'] => substr($titre_grand, 8, -6);
+	&tPropriete['sigle'] => substr($titre_grand, 0, 7);
+	&tPropriete['typeCours'] => get_field('type_de_cours');
+
+}
