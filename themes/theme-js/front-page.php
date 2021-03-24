@@ -22,9 +22,36 @@ get_header();
 			</header><!-- .page-header -->
 			<!-- carrousel -->
 		<section class="carrousel">
-		<div>1</div>
-		<div>2</div>
-		<div>3</div>
+		<article class="slide__conteneur">
+			<div class="slide">
+			<image src="" alt="">
+			<div>
+			<p>Darksider Wiki</p>
+			<a href="https://darksiders.fandom.com/wiki/Darksiders_Wiki">SiteWeb</a>
+			<p>Page Principal</p>
+			</div>
+			</div>
+		</article>
+		<article class="slide__conteneur">
+			<div class="slide">
+			<image src="" alt="">
+			<div>
+			<p>Darksider Wiki</p>
+			<a href="https://darksiders.fandom.com/wiki/Darksiders_Wiki">SiteWeb</a>
+			<p>Page Principal</p>
+			</div>
+			</div>
+		</article>
+		<article class="slide__conteneur">
+			<div class="slide">
+			<image src="" alt="">
+			<div>
+			<p>Darksider Wiki</p>
+			<a href="https://darksiders.fandom.com/wiki/Darksiders_Wiki">SiteWeb</a>
+			<p>Page Principal</p>
+			</div>
+			</div>
+		</article>
 		</section>
 		<button id="un">1</button>
 		<button id="deux">2</button>

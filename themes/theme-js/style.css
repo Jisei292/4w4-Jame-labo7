@@ -1381,4 +1381,62 @@ carrousel
 .carrousel div:nth-of-type(3) {
   background-color: crimson;
 }
+
+/* Local carrousel
+--------------------------------------------- */
+/* --------------------------------------------------------------------------------------------
+carrousel
+---------------------------------------------------------------------------------------------*/
+.carrousel {
+  display: flex;
+  width: 300vw;
+  height: 20vh;
+  transition: transform .5s;
+}
+
+.carrousel .slide__conteneur {
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.carrousel .slide__conteneur .slide {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.carrousel .slide__conteneur .slide img {
+  display: block;
+  margin: 2%;
+}
+
+.carrousel .slide__conteneur .slide .slide__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.carrousel .slide__conteneur .slide .slide__info p {
+  font-size: .8rem;
+}
+
+.carrousel .slide__conteneur .slide .slide__info a {
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.carrousel .slide__conteneur:nth-of-type(1) {
+  background-color: blue;
+}
+
+.carrousel .slide__conteneur:nth-of-type(2) {
+  background-color: chartreuse;
+}
+
+.carrousel .slide__conteneur:nth-of-type(3) {
+  background-color: crimson;
+}
 /*# sourceMappingURL=style.css.map */
