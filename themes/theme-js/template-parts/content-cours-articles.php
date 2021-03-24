@@ -6,10 +6,11 @@
  *
  * @package theme.JS
  */
+global = $tPropriete
 
 ?>
-	<article>
-				<p> <?php echo $sigle . " - " . $nbHeure . " - " . $typeCours;?> </p>
-				<a href="<?php echo get_permalink(); ?>"> <?php echo $titre; ?> </a>
-				<p> Session :  <?php echo $session?> </p>
-				</article>		
+<article>
+				<p> <?php echo $tPropriete['sigle'] . " - " . $tPropriete['typeCours'] . " - " . $tPropriete['nbHeure'];?> </p>
+				<a href="<?php echo get_permalink(); ?>"> <?php echo $tPropriete['titre']; ?> </a>
+				<p> Session :  <?php echo $tPropriete['session']?> </p>
+</article>	

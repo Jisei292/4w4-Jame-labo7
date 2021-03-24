@@ -703,7 +703,7 @@ body {
 
 @media (min-width: 800px) {
   .site-branding, #primary, #colophon {
-    margin-left: 3rem;
+    margin-left: 1rem;
   }
 }
 

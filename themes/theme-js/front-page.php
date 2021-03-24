@@ -38,15 +38,16 @@ get_header();
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
+				convertirtableau($tPropriete);
 
-				$titre_grand = get_the_title();   
+				/* $titre_grand = get_the_title();   
 				$session = substr($titre_grand, 4,1);
 				$nbHeure = substr($titre_grand, -4,3);
 				$titre = substr($titre_grand, 8, -6);
 				$sigle = substr($titre_grand, 0, 7);
-				$typeCours = get_field('type_de_cours');
+				$typeCours = get_field('type_de_cours'); */
 				
-				if ($precedent != $typeCours): ?>
+				if ($tPropriete['typeCours'] != $precedent): ?>
 				<?php if ($precedent != "XXXXXXX"): ?>
 				
 				</section>
@@ -55,15 +56,11 @@ get_header();
 				
 				
 				<?php endif ?>
-
-				<article>
-				<p> <?php echo $sigle . " - " . $nbHeure . " - " . $typeCours;?> </p>
-				<a href="<?php echo get_permalink(); ?>"> <?php echo $titre; ?> </a>
-				<p> Session :  <?php echo $session?> </p>
-				</article>			
+			
+				<?php get_template_part( 'template-parts/content', 'page' ); ?>
 
 				<?php
-				$precedent = $typeCours;
+				$precedent = $tPropriete['typeCours'];
 			endwhile; ?>
 		
 			</section>
@@ -75,13 +72,24 @@ get_header();
 get_sidebar();
 get_footer();
 
-function convertirtableau(&tPropriete)
+function convertirtableau(&$tPropriete)
 {
 
-	&tPropriete['session'] => substr($titre_grand, 4,1);
-	&tPropriete['nbHeure'] => substr($titre_grand, -4,3);
-	&tPropriete['titre'] => substr($titre_grand, 8, -6);
-	&tPropriete['sigle'] => substr($titre_grand, 0, 7);
-	&tPropriete['typeCours'] => get_field('type_de_cours');
+	/* $titre_grand = get_the_title();   
+				$session = substr($titre_grand, 4,1);
+				$nbHeure = substr($titre_grand, -4,3);
+				$titre = substr($titre_grand, 8, -6);
+				$sigle = substr($titre_grand, 0, 7);
+				$typeCours = get_field('type_de_cours'); */
+
+
+	$tPropriete['titre'] = get_the_title();
+	$tPropriete['session'] = substr($tPropriete['titre'], 4,1);
+	$tPropriete['nbHeure'] = substr($tPropriete['titre'], -4,3);
+	$tPropriete['titre'] = substr($tPropriete['titre'], 8, -6);
+	$tPropriete['sigle'] = substr($tPropriete['titre'], 0, 7);
+	$tPropriete['typeCours'] = get_field('type_de_cours');
 
 }
+
+?>
