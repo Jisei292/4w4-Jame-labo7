@@ -76,8 +76,9 @@ get_header();
 				
 				if ($tPropriete['typeCours'] != $precedent): ?>
 				<?php if ($precedent != "XXXXXXX"): ?>
-				
+
 				</section>
+				<h2><?php echo $typeCours ?></h2>
 				<?php endif ?>
 				<section>
 				
