@@ -1,6 +1,5 @@
 (function (){		
             let bout1 = document.getElementById("un")
-			console.log(bout1.id)
 			let bout2 = document.getElementById("deux")
 			let bout3 = document.getElementById("trois")
 			let carrousel = document.querySelector('.carrousel')

@@ -21,7 +21,7 @@ get_header();
 				?>
 			</header><!-- .page-header -->
 			<!-- carrousel -->
-		<section class="carrousel">
+		<section class="carrousel-2">
 		<article class="slide__conteneur">
 			<div class="slide">
 			<image src="" alt="">
