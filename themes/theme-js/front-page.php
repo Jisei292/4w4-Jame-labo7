@@ -53,9 +53,11 @@ get_header();
 			</div>
 		</article>
 		</section>
-		<button id="un">1</button>
-		<button id="deux">2</button>
-		<button id="trois">3</button>
+		<section class="ctrl-carrousel"> 
+		<input class="rad-carrousel" type="radio" name="rad-carrousel">
+		<input class="rad-carrousel" type="radio" name="rad-carrousel">
+		<input class="rad-carrousel" type="radio" name="rad-carrousel">
+		</section>
 
 		
 		<section class="list-cours"> 

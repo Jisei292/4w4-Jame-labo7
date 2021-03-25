@@ -207,5 +207,4 @@ function extraire_cours_front_page($query){
 	
 }
 }
-
 add_action('pre_get_posts','extraire_cours_front_page');
