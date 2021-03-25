@@ -46,7 +46,7 @@ get_header();
 				<section class="ctrl-carrousel"> 
 				<?php echo $chaine_bouton_radio; ?>
 				</section>
-				<?php endif ?>
+				
 				</section>
 				<?php endif ?>
 				<h2><?php echo $tPropriete['typeCours'] ?></h2>
