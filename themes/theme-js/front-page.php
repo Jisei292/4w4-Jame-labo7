@@ -22,36 +22,7 @@ get_header();
 			</header><!-- .page-header -->
 			<!-- carrousel -->
 		<section class="carrousel-2">
-		<article class="slide__conteneur">
-			<div class="slide">
-			<image src="" alt="">
-			<div>
-			<p>Darksider Wiki</p>
-			<a href="https://darksiders.fandom.com/wiki/Darksiders_Wiki">SiteWeb</a>
-			<p>Page Principal</p>
-			</div>
-			</div>
-		</article>
-		<article class="slide__conteneur">
-			<div class="slide">
-			<image src="" alt="">
-			<div>
-			<p>Darksider Wiki</p>
-			<a href="https://darksiders.fandom.com/wiki/Darksiders_Wiki">SiteWeb</a>
-			<p>Page Principal</p>
-			</div>
-			</div>
-		</article>
-		<article class="slide__conteneur">
-			<div class="slide">
-			<image src="" alt="">
-			<div>
-			<p>Darksider Wiki</p>
-			<a href="https://darksiders.fandom.com/wiki/Darksiders_Wiki">SiteWeb</a>
-			<p>Page Principal</p>
-			</div>
-			</div>
-		</article>
+		
 		</section>
 		<section class="ctrl-carrousel"> 
 		<input class="rad-carrousel" type="radio" name="rad-carrousel">
@@ -68,28 +39,20 @@ get_header();
 			while ( have_posts() ) :
 				the_post();
 				convertirtableau($tPropriete);
-
-				/* $titre_grand = get_the_title();   
-				$session = substr($titre_grand, 4,1);
-				$nbHeure = substr($titre_grand, -4,3);
-				$titre = substr($titre_grand, 8, -6);
-				$sigle = substr($titre_grand, 0, 7);
-				$typeCours = get_field('type_de_cours'); */
-				
 				if ($tPropriete['typeCours'] != $precedent): 
 				if ($precedent != "XXXXXXX"): ?>
-
 				</section>
-				<h2><?php echo $typeCours ?></h2>
+				<h2><?php echo $tPropriete['typeCours'] ?></h2>
 				<?php endif ?>
-				<section>
+				<section <?php echo($tPropriete['typeCours']=='Web'? 'class="carrousel-2"' : '' ); ?>>		
+				<?php endif ?>			
+				<?php if ($tPropriete['typeCours'] == "Web") : 
+					get_template_part( 'template-parts/content', 'cours-carrousel' ); 
+				else : 
+					get_template_part( 'template-parts/content', 'cours-article' ); 
+					
+				endif;
 				
-				
-				<?php endif ?>
-			
-				<?php get_template_part( 'template-parts/content', 'page' ); ?>
-
-				<?php
 				$precedent = $tPropriete['typeCours'];
 			endwhile; ?>
 		

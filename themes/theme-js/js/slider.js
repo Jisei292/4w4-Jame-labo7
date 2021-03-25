@@ -2,10 +2,11 @@
             let bout = document.querySelectorAll('.rad-carrousel')
 			let carrousel = document.querySelector('.carrousel-2')
 			let k = 0;
+			bout[0].checked = true;
 			for (const bt of bout){
 				bt.value = k++;
-				bout.addEventListener('mousedown', function(){
-					carrousel.getElementsByClassName.transform = "translateX(" + (-this.value*100) + "vw)"
+				bt.addEventListener('mousedown', function(){
+					carrousel.style.transform = "translateX(" + (-this.value*100) + "vw)"
 				})
 			}
-        }())   
+        }())  
