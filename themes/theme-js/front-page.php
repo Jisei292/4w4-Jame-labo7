@@ -74,8 +74,8 @@ get_header();
 				$sigle = substr($titre_grand, 0, 7);
 				$typeCours = get_field('type_de_cours'); */
 				
-				if ($tPropriete['typeCours'] != $precedent): ?>
-				<?php if ($precedent != "XXXXXXX"): ?>
+				if ($tPropriete['typeCours'] != $precedent): 
+				if ($precedent != "XXXXXXX"): ?>
 
 				</section>
 				<h2><?php echo $typeCours ?></h2>
