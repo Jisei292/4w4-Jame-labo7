@@ -6,6 +6,7 @@ carrousel
     width: 300vw;
     height: 20vh;
     transition: transform .5s;
+    flex-wrap: nowrap !important;
 
     .slide__conteneur{
         display: flex;

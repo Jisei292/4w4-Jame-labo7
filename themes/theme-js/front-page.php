@@ -35,21 +35,28 @@ get_header();
 
 			<?php
 			$precedent = "XXXXXXX";
+			$chaine_bouton_radio = '';
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
 				convertirtableau($tPropriete);
 				if ($tPropriete['typeCours'] != $precedent): 
 				if ($precedent != "XXXXXXX"): ?>
+				<?php if ($precedent == "Web") ?>
+				<section class="ctrl-carrousel"> 
+				<?php echo $chaine_bouton_radio; ?>
 				</section>
-				<h2><?php echo $tPropriete['typeCours'] ?></h2>
 				<?php endif ?>
+				</section>
+				<?php endif ?>
+				<h2><?php echo $tPropriete['typeCours'] ?></h2>
 				<section <?php echo($tPropriete['typeCours']=='Web'? 'class="carrousel-2"' : '' ); ?>>		
 				<?php endif ?>			
 				<?php if ($tPropriete['typeCours'] == "Web") : 
 					get_template_part( 'template-parts/content', 'cours-carrousel' ); 
+					$chaine_bouton_radio .= '<input class="rad-carrousel" type="radio" name="rad-carrousel">';
 				else : 
-					get_template_part( 'template-parts/content', 'cours-article' ); 
+					get_template_part( 'template-parts/content', 'cours-articles' ); 
 					
 				endif;
 				
