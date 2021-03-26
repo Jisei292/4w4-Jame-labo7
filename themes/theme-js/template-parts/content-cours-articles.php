@@ -6,7 +6,7 @@
  *
  * @package theme.JS
  */
-global = $tPropriete
+global $tPropriete;
 
 ?>
 <article>

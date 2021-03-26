@@ -21,7 +21,6 @@ get_header();
 				?>
 			</header><!-- .page-header -->
 			<!-- carrousel -->
-		<section class="carrousel-2">
 		
 		</section>
 		<section class="ctrl-carrousel"> 

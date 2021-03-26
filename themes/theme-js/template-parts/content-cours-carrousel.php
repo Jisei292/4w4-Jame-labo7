@@ -6,17 +6,18 @@
  *
  * @package theme.JS
  */
-/* global = $tPropriete */
+global $tPropriete;
 
-?>	
+?>
+
 
 <article class="slide__conteneur">
 			<div class="slide">
 			<?php the_post_thumbnail( 'thumbnail' ); ?>
 			<div>
-			<p>Darksider Wiki</p>
-			<a href="https://darksiders.fandom.com/wiki/Darksiders_Wiki">SiteWeb</a>
-			<p>Page Principal</p>
+			<p> <?php echo $tPropriete['sigle'] . " - " . $tPropriete['typeCours'] . " - " . $tPropriete['nbHeure'];?> </p>
+	<a href="<?php echo get_permalink(); ?>"> <?php echo $tPropriete['titre']; ?> </a>
+	<p> Session :  <?php echo $tPropriete['session']?> </p>
 			</div>
 			</div>
 		</article>

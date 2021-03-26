@@ -90,22 +90,7 @@ body.home::after {
         }
     }
 
-    @include tablet {
-
-        article {
-            width: 45%;
-            margin: 1%;
-        }
-
-    }
-
-    @include desktop {
-        article {
-            width: 28%;
-            margin: 1%;
-        }
-
-    }
+ 
 
 
 }
