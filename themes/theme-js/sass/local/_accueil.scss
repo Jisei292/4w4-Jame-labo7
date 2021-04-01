@@ -65,12 +65,13 @@ body.home::after {
 
 .list_cours{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 
-    section{
+    section.bloc{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        width: 30%;
 
     article{
         display: flex;
