@@ -63,37 +63,41 @@ body.home::after {
 
 */
 
-.list_cours{
+.list-cours{
     display: flex;
-    flex-direction: row;
-
+    flex-direction: column;
     section.bloc{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        width: 30%;
-
-    article{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        width: 30%;
-        border: 1px solid red;
-        p{
-            font-size: .7rem;
-            font-weight: bold;
-        }
-        a{
-            font-size: 2rem;
-            font-weight: bold;
-            text-decoration: none;
+        width: 100%; //Largeur d'un conteneur bloc cours
+        article{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%; // une colonne
+            border: 1px solid rgb(193, 186, 255);
+            margin: 1%;
+            padding : 1rem;
+            @include media-desktop (600px)
+            {
+                width: 45%; // deux colonnes
+            }
+            @include media-desktop (900px)
+            {
+                width: 30%; // trois colonnes
+            }
+            p{
+                font-size: .7rem;
+                font-weight: bold;
+            }
+            a{
+                font-size: 2rem;
+                font-weight: bold;
+                text-decoration: none;
+                text-align: center;
+            }
         }
     }
-
- 
-
-
-}
-    
 }

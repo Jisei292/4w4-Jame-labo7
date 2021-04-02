@@ -1209,36 +1209,51 @@ body.home::after {
 }
 
 */
-.list_cours {
+.list-cours {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
-.list_cours section.bloc {
+.list-cours section.bloc {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 30%;
+  width: 100%;
 }
 
-.list_cours section.bloc article {
+.list-cours section.bloc article {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 30%;
-  border: 1px solid red;
+  width: 90%;
+  border: 1px solid #c1baff;
+  margin: 1%;
+  padding: 1rem;
 }
 
-.list_cours section.bloc article p {
+@media (min-width: 600px) {
+  .list-cours section.bloc article {
+    width: 45%;
+  }
+}
+
+@media (min-width: 900px) {
+  .list-cours section.bloc article {
+    width: 30%;
+  }
+}
+
+.list-cours section.bloc article p {
   font-size: .7rem;
   font-weight: bold;
 }
 
-.list_cours section.bloc article a {
+.list-cours section.bloc article a {
   font-size: 2rem;
   font-weight: bold;
   text-decoration: none;
+  text-align: center;
 }
 
 /* Local burger
@@ -1390,7 +1405,7 @@ carrousel
 ---------------------------------------------------------------------------------------------*/
 .carrousel-2 {
   display: flex;
-  width: 300vw;
+  width: 600vw;
   height: 20vh;
   transition: transform .5s;
   flex-wrap: nowrap !important;
@@ -1398,6 +1413,7 @@ carrousel
 
 .carrousel-2 .slide__conteneur {
   display: flex;
+  flex-direction: row;
   width: 100vw;
   align-items: center;
   justify-content: center;
@@ -1440,6 +1456,18 @@ carrousel
 
 .carrousel-2 .slide__conteneur:nth-of-type(3) {
   background-color: crimson;
+}
+
+.carrousel-2 .slide__conteneur:nth-of-type(4) {
+  background-color: orange;
+}
+
+.carrousel-2 .slide__conteneur:nth-of-type(5) {
+  background-color: #707015;
+}
+
+.carrousel-2 .slide__conteneur:nth-of-type(6) {
+  background-color: purple;
 }
 
 .ctrl-carrousel {

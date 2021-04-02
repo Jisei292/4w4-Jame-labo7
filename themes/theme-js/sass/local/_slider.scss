@@ -3,13 +3,14 @@ carrousel
 ---------------------------------------------------------------------------------------------*/
 .carrousel-2{
     display: flex;
-    width: 300vw;
+    width: 600vw;
     height: 20vh;
     transition: transform .5s;
     flex-wrap: nowrap !important;
 
     .slide__conteneur{
         display: flex;
+        flex-direction: row;
         width: 100vw;
         align-items: center;
         justify-content: center;
@@ -43,8 +44,16 @@ carrousel
         }
         &:nth-of-type(3){
         background-color: crimson;
-        
         }
+        &:nth-of-type(4){
+            background-color: orange;
+            }
+            &:nth-of-type(5){
+            background-color: rgb(112, 112, 21);
+            }
+            &:nth-of-type(6){
+            background-color: purple;
+            }
     }    
 }
 

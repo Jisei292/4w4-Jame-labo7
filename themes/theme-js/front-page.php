@@ -12,7 +12,7 @@ get_header();
 
 	<main id="primary" class="site-main">
 
-		<?php if ( have_posts() ) : ?>
+	<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
 				<?php
@@ -22,12 +22,12 @@ get_header();
 			</header><!-- .page-header -->
 			<!-- carrousel -->
 		
-		</main>
-		 <section class="ctrl-carrousel"> 
-		<input class="rad-carrousel" type="radio" name="rad-carrousel">
-		<input class="rad-carrousel" type="radio" name="rad-carrousel">
-		<input class="rad-carrousel" type="radio" name="rad-carrousel">
-		</section> 
+				
+				<!-- <section class="ctrl-carrousel">
+				<input class="rad-carrousel" type="radio" name="rad-carrousel">
+				<input class="rad-carrousel" type="radio" name="rad-carrousel">
+				<input class="rad-carrousel" type="radio" name="rad-carrousel">
+				</section> -->
 
 		
 		<section class="list-cours"> 
@@ -42,17 +42,16 @@ get_header();
 				//print_r($tPropriete)
 				if ($tPropriete['typeCours'] != $precedent): 
 					if ($precedent != "XXXXXXX"): ?>
-					<?php if ($precedent == "Web"): ?>
-						<section class="ctrl-carrousel">
-						<?php echo $chaine_bouton_radio; ?>
 						</section>
-					<?php endif; ?>
-					</section>
+					<?php if ($precedent == "Web"): ?>
+							<section class="ctrl-carrousel">
+								<?php echo $chaine_bouton_radio; ?>
+							</section>
+						<?php endif; ?>
 					<?php endif; ?>
 					<h2><?php echo $tPropriete['typeCours'];?></h2>
-				
-				<?php endif; ?>
-				<section <?php echo($tPropriete['typeCours']=='Web'? 'class="carrousel-2"' : 'class="bloc"' ); ?>>		
+					<section <?php echo($tPropriete['typeCours']=='Web'? 'class="carrousel-2"' : 'class="bloc"' ); ?>>
+					<?php endif; ?>		
 				
 				<?php if ($tPropriete['typeCours'] == "Web") : 
 					get_template_part( 'template-parts/content', 'cours-carrousel' ); 
@@ -64,9 +63,6 @@ get_header();
 				
 				$precedent = $tPropriete['typeCours'];
 			endwhile; ?>
-
-			
-		
 			</section>
 		<?php endif;?>
 
