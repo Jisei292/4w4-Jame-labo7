@@ -48,6 +48,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Alignments
 
 --------------------------------------------------------------*/
+/*liens normaux*/
+/*liens menu*/
+/*liens titres*/
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
@@ -1446,28 +1449,16 @@ carrousel
   text-decoration: none;
 }
 
-.carrousel-2 .slide__conteneur:nth-of-type(1) {
+.carrousel-2 .slide__conteneur:nth-of-type(1n) .slide {
   background-color: blue;
 }
 
-.carrousel-2 .slide__conteneur:nth-of-type(2) {
+.carrousel-2 .slide__conteneur:nth-of-type(2n) .slide {
   background-color: chartreuse;
 }
 
-.carrousel-2 .slide__conteneur:nth-of-type(3) {
+.carrousel-2 .slide__conteneur:nth-of-type(3n) .slide {
   background-color: crimson;
-}
-
-.carrousel-2 .slide__conteneur:nth-of-type(4) {
-  background-color: orange;
-}
-
-.carrousel-2 .slide__conteneur:nth-of-type(5) {
-  background-color: #707015;
-}
-
-.carrousel-2 .slide__conteneur:nth-of-type(6) {
-  background-color: purple;
 }
 
 .ctrl-carrousel {

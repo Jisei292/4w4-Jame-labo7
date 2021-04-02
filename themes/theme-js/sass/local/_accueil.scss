@@ -79,7 +79,7 @@ body.home::after {
             width: 90%; // une colonne
             border: 1px solid rgb(193, 186, 255);
             margin: 1%;
-            padding : 1rem;
+            padding: 1rem;
             @include media-desktop (600px)
             {
                 width: 45%; // deux colonnes

@@ -36,24 +36,15 @@ carrousel
                 }
             }
         }
-        &:nth-of-type(1){
+        &:nth-of-type(1n) .slide{
         background-color: blue;
         }
-        &:nth-of-type(2){
+        &:nth-of-type(2n) .slide{
         background-color: chartreuse;
         }
-        &:nth-of-type(3){
+        &:nth-of-type(3n) .slide{
         background-color: crimson;
         }
-        &:nth-of-type(4){
-            background-color: orange;
-            }
-            &:nth-of-type(5){
-            background-color: rgb(112, 112, 21);
-            }
-            &:nth-of-type(6){
-            background-color: purple;
-            }
     }    
 }
 
